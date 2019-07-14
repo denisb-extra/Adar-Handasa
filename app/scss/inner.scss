@@ -1,0 +1,829 @@
+/* ---------------------- Section top-inner ---------------------- */
+section.top-inner {
+	background: url("../images/inner/bg-top.png");
+	background-position: center;
+	.section-inner {
+		display: flex;
+		align-items: center;
+
+		padding: 60px 10px;
+		
+		padding-left: 10%;
+		.content {
+			max-width: 700px;
+			padding-left: 10%;
+			.title {
+				@include f-b;
+				font-size: 70px;
+				line-height: 60px;
+				color: #59585b;
+
+				
+			}
+			.sep {
+				display: block;
+				height: 7px;	
+				width: 156px;
+				background-color: #009CDA;
+				
+				margin-top: 25px;
+			}
+			.text {
+				@include f-r;
+				font-size: 18px;
+				color: #59585b;
+				margin-top: 25px; 
+
+				a {
+					@include f-r;
+					font-size: 18px;
+					color: #59585b;
+					margin-top: 25px; 
+				}
+			}
+		}
+
+	}
+
+	@media only screen and (max-width : 550px) {
+		.section-inner {
+			.content {
+				.title {
+					font-size: 50px;
+					line-height: 50px;
+				}
+			}
+		}
+	}
+
+}
+/* --------------------- /Section top-inner ---------------------- */
+
+/* ---------------------- Section about-inner ---------------------- */
+section.about-inner {
+	@extend .about;
+	background: #e9eaea;
+}
+/* --------------------- /Section about-inner ---------------------- */
+
+/* ---------------------- Section gallery ---------------------- */
+section.gallery {
+	margin-top: 35px;
+	padding-bottom: 25px;
+	font-size: 0;
+
+	.boxes {
+		display: flex;
+		flex-wrap: wrap;
+		margin: 0 -1%;
+		.box {
+			margin: 1%;
+			width: 31.3%;
+			
+			position: relative;
+			.image {
+				overflow: hidden;
+			}
+			&:hover {
+				img {
+					transform: scale(1.2);
+				}
+			}
+			img {
+				transition: 0.5s;
+				transform: scale(1);
+				width: 100%;
+			}
+
+			.name {
+				position: absolute;
+				right: 0;
+				bottom: 25px;
+				background: #543F37;
+				padding: 15px;
+				p {
+					@include f-r;
+					font-size: 20px;
+					color: #fff;
+				}
+			}
+		}
+	}
+
+	@media only screen and (max-width : 1100px) {
+		.boxes {
+			.box {
+				width: 31.3%;
+			}
+		}
+	}
+
+	@media only screen and (max-width : 750px) {
+		.boxes {
+			.box {
+				width: 48%;
+			}
+		}
+	}
+
+	@media only screen and (max-width : 500px) {
+		.boxes {
+			.box {
+				width: 100%;
+			}
+		}
+	}
+}
+/* --------------------- /Section gallery ---------------------- */
+
+/* ---------------------- Section articles ---------------------- */
+section.articles {
+	font-size: 0;
+	margin-top: 15px;
+	padding-bottom: 70px;
+	.boxes {
+
+		.box {
+			display: block;
+			overflow: hidden;
+			margin-top: 40px;
+			.part-image {
+				width: 31%;
+				float: right;
+				img {
+					width: 100%;
+				}
+			}
+			.part-content {
+				width: 69%;
+				padding-right: 44px;
+				float: left;
+				.title {
+					@include f-b;
+					font-size: 30px;
+					color: #1474ba;
+					transition: 0.5s;
+				}
+				.text {
+					@include f-r;
+					font-size: 18px;
+					color: #5e5d60;
+					margin-top: 30px;
+				}
+
+				.read-more {
+					@include f-b;
+					font-size: 18px;
+					color: #1474ba;
+					border-bottom: 3px solid #1474ba;
+					padding-bottom: 9px;
+					padding-right: 5px;
+					padding-left: 5px;
+					display: inline-block;
+					margin-top: 25px;
+					float: left;
+					transition: 0.5s;
+				}
+			}
+
+			&:hover {
+				.part-content {
+					.title {
+						color: #f9931b;
+					}
+					.read-more {
+						color: #f9931b;
+						border-bottom: 3px solid #f9931b;
+					}
+				}
+			}
+		}
+	}
+
+	@media only screen and (max-width : 750px) {
+		margin-top: 0px;
+		padding-bottom: 35px;
+		.boxes {
+
+			.box {
+				.part-image {
+					width: 100%;
+					float: none;
+					img {
+						width: auto;
+						max-width: 100%;
+
+					}
+				}
+				.part-content {
+					margin-top: 15px;
+					width: 100%;
+					float: none;
+					padding-right: 0px;
+				}
+			}
+		}
+	}
+}
+/* --------------------- /Section articles ---------------------- */
+
+/* ---------------------- Section services-inner ---------------------- */
+section.services-inner {
+	
+	padding-bottom: 100px;
+	.title {
+		@include f-b;
+		font-size: 50px;
+		color: #f9931b;
+		text-align: center;
+		margin-top: 60px;
+	}
+
+	.boxes {
+		display: flex;
+		flex-wrap: wrap;
+		align-items: stretch;
+		margin: 0 -1%;
+		margin-top: 55px;
+		
+		.box {
+			
+			width: 50%;
+			text-align: center;
+			border: 1px solid #d2d2d3;
+			border-bottom: none;
+			padding: 40px 0;
+			position: relative;
+			top: 0;
+			
+			&:hover {
+				.wrapper {
+					top: -10px;
+				}
+			}
+			&:nth-child(1), &:nth-child(2) {
+				border-top: none;
+			} 
+
+			&:nth-child(odd){
+				border-right: none;
+			} 
+			&:nth-child(even){
+				border-left: none;
+			} 
+			.wrapper {
+				display: table;
+				text-align: right;
+				margin: auto;
+				width: 70%;
+				transition: 0.5s;
+				position: relative;
+				top: 0;
+				.image {
+					display: table-cell;
+					vertical-align: middle;
+				}
+
+				.content {
+					display: table-cell;
+					vertical-align: middle;
+					padding-right: 25px;
+					
+					
+					.name {
+						@include f-b;
+						font-size: 30px;
+						color: #1675bb;
+					}
+					.text {
+						@include f-r;
+						font-size: 18px;
+						color: #59585b;
+					}
+				}
+			}
+		}
+	}
+
+	@media only screen and (max-width : 880px) {
+		
+		padding-bottom: 35px;
+		.title {
+			font-size: 40px;
+			margin-top: 20px;
+		}
+		.boxes {
+			margin-top: 10px;
+			.box {
+				width: 100%;
+				border: none !important;
+				border-bottom: 1px solid #d2d2d3 !important;
+				&:last-child {
+					border-bottom: none !important;
+				}
+				.wrapper {
+
+				}
+			}
+		}
+	}
+
+	@media only screen and (max-width : 470px) {
+		.boxes {
+			.box {
+				.wrapper {
+					width: 100%;
+				}
+			}
+		}
+	}
+}
+/* --------------------- /Section services-inner ---------------------- */
+
+/* ---------------------- Section clients ---------------------- */
+section.clients {
+	margin-top: 55px;
+	padding-bottom: 55px;
+	.boxes {
+		display: flex;
+		flex-wrap: wrap;
+
+		.box {
+			margin: 1%;
+			width: 31.3%;
+			border: 1px solid #e1e1e1;
+			text-align: center;
+			height: 260px;
+			&:hover {
+				img {
+					filter: grayscale(0%);
+				}
+			}
+			img {
+				position: relative;
+				top: 50%;
+				transform: translateY(-50%);
+				filter: grayscale(100%);
+				transition: 0.5s;
+				max-width: 80%;
+			}
+		}
+	}
+
+	@media only screen and (max-width : 1100px) {
+		.boxes {
+			.box {
+				width: 31.3%;
+			}
+		}
+	}
+
+	@media only screen and (max-width : 750px) {
+		margin-top: 35px;
+		padding-bottom: 35px;
+		.boxes {
+			.box {
+				width: 48%;
+				height: 200px;
+			}
+		}
+	}
+}
+/* --------------------- /Section clients ---------------------- */
+
+/* ---------------------- Section contact-inner ---------------------- */
+section.contact-inner {
+	margin-top: 60px;
+	padding-bottom: 100px;
+	.title {
+		@include f-b;
+		font-size: 50px;
+		color: #f9931b;
+		text-align: center;
+	}
+
+	.subtitle {
+		@include f-r;
+		font-size: 18px;
+		color: #5e5d60;
+		text-align: center;
+		margin-top: 15px;
+	}
+
+	.wpcf7 {
+		form {
+			display: flex;
+			flex-wrap: wrap;
+			margin: -1%;
+			margin-top: 45px;
+			position: relative;
+		}
+
+		.wpcf7-form-control-wrap {
+			display: block;
+			width: 98%;
+			margin: 1%;
+
+			&:nth-child(2), &:nth-child(3) {
+				width: 48%;
+			}
+		}
+
+		input, textarea {
+			width: 100%;
+			@include f-r;
+			font-size: 18px;
+			color: #5e5d60;
+			outline: none;
+			border: 1px solid #bdbab4;
+			padding: 20px;
+			border-radius: 5px;
+			-webkit-appearance: none;
+			@include placeholder-color(#59585b);
+			&:focus {
+				@include placeholder-color(#f9931b);
+			}
+
+			&.wpcf7-not-valid {
+				border: 1px solid #E85136;
+			}
+		}
+
+		input[type="submit"] {
+			width: 98%;
+			margin: 1%;
+			@include f-b;
+			font-size: 20px;
+			color: #fff;
+			border: none;
+			border-radius: 100px;
+			background: #f9931b;
+			transition: 0.5s;
+			max-width: 250px;
+			margin-right: auto;
+			&:hover {
+				background: #c38b30;
+			}
+
+
+		}
+
+		span[role="alert"], .wpcf7-response-output {
+			@include f-r;
+			border: none;
+			color: #E85136;
+			position: absolute;
+			
+		}
+		.wpcf7-response-output {
+			bottom: -58px;
+			font-size: 20px;
+		}
+		
+		.ajax-loader {
+			display: none !important;
+		}
+	}
+
+	@media only screen and (max-width : 550px) {
+		margin-top: 30px;
+		padding-bottom: 35px;
+		.wpcf7 {
+			form {
+				display: flex;
+				flex-wrap: wrap;
+				margin: -1%;
+				margin-top: 45px;
+			}
+
+			.wpcf7-form-control-wrap {
+				display: block;
+				width: 98%;
+				margin: 1%;
+
+				&:nth-child(2), &:nth-child(3) {
+					width: 98%;
+				}
+			}
+		}
+	}
+}
+/* --------------------- /Section contact-inner ---------------------- */
+
+/* ---------------------- Section contact-bottom ---------------------- */
+section.contact-bottom {
+	@extend .services;
+	height: 468px;
+	.parts {
+		.part-content {
+			background: #e9eaea;
+
+			.contacts {
+				.contact {
+					display: table;
+					vertical-align: middle;
+					margin-top: 25px;
+					max-width: 300px;
+					.icon {
+						display: table-cell;
+						vertical-align: middle;
+						text-align: center;
+					}
+					.text {
+						display: table-cell;
+						vertical-align: middle;
+						padding-right: 20px;
+						@include f-b;
+						font-size: 20px;
+						color: #5e5d60;
+					}
+				}
+			}
+		}
+	}
+	@media only screen and (max-width : 960px) {
+		height: auto;
+
+		.parts {
+			flex-direction: column-reverse;
+		}
+	}
+}
+/* --------------------- /Section contact-bottom ---------------------- */
+
+/* ---------------------- Section post ---------------------- */
+section.post {
+	margin-top: 60px;
+	padding-bottom: 45px;
+	.section-inner {
+		max-width: 1220px;
+	}
+
+	.content {
+		@include f-r;
+		font-size: 18px;
+		color: #5e5d60;
+		img {
+			//max-width: 50%;
+		}
+		h1 {
+			@include f-b;
+			font-size: 50px;
+			color: #f9931b;
+			margin: 0;
+		}
+		h2,h3,h4,h5 {
+			@include f-b;
+			font-size: 30px;
+			line-height: 30px;
+			color: #1675bb;
+		}
+		p {
+			margin-top: 25px;
+		}
+
+
+	}
+
+	@media only screen and (max-width : 550px) {
+		margin-top: 35px;
+		padding-bottom: 15px;
+		.content {
+			img {
+				max-width: 100%;
+				width: 100%;
+			}
+			h1 {
+				font-size: 35px;
+				line-height: 35px;
+			}
+		}
+	}
+}
+/* --------------------- /Section post ---------------------- */
+
+/* ---------------------- Section project-top ---------------------- */
+section.project-top {
+	@extend .post;
+
+	.more {
+		display: inline-block;
+		@include f-b;
+		font-size: 20px;
+		color: #1474ba;
+		background: none;
+		border-radius: 100px;
+		padding: 20px 35px;
+		text-align: center;
+		border: 2px solid #1474ba;
+		white-space: nowrap;
+		margin-top: 35px;
+		
+	}
+}
+/* --------------------- /Section project-top ---------------------- */
+
+/* ---------------------- Section gallery-projects ---------------------- */
+section.gallery-projects {
+	@extend .gallery;
+	margin-top: 0;
+	.boxes {
+
+		.box {
+			position: relative;
+			.caption {
+				position: absolute;
+				top: 0;
+				bottom: 0;
+				left: 0;
+				right: 0;
+				background: rgba(0,0,0,0.85);
+				text-align: center;
+				p {
+					@include f-b;
+					font-size: 30px;
+					color: #fff;
+					position: absolute;
+					top: 50%;
+					transform: translateY(-50%);
+					width: 100%;
+				}
+				opacity: 0;
+				transition: 0.5s;
+			}
+
+			&:hover {
+				.caption {
+					opacity: 1;
+				}
+			}
+		}
+	}
+}
+/* --------------------- /Section gallery-projects ---------------------- */
+
+/* ---------------------- Section steps ---------------------- */
+section.steps {
+	background: #f6f6f6;
+	padding: 70px 0;
+	.title {
+		@include f-b;
+		font-size: 30px;
+		color: #1675bb;
+		text-align: center;
+	}
+
+	.steps {
+		margin-top: 25px;
+		display: flex;
+		flex-wrap: wrap;
+		.part {
+			width: 50%;
+		}
+		.step {
+			display: table;
+			margin-top: 10px;
+			padding-left: 35px;
+			.number {
+				display: table-cell;
+				vertical-align: middle;
+				p {
+					@include f-b;
+					font-size: 24px;
+					color: #f9931b;
+					display: inline-block;
+					text-align: center;
+
+					border: 2px solid #f9931b;
+					border-radius: 100px;
+					height: 35px;
+					width: 35px;
+					line-height: 29px;
+				}
+			}
+			.name {
+				display: table-cell;
+				vertical-align: middle;
+				p {
+					@include f-r;
+					font-size: 18px;
+					color: #5e5d60;
+					padding-right: 15px;
+				}
+			}
+		}
+	}
+
+	@media only screen and (max-width : 600px) {
+		padding: 35px 0;
+		.steps {
+			.part {
+				width: 100%;
+			}
+		}
+	}
+}
+/* --------------------- /Section steps ---------------------- */
+
+
+/* ---------------------- Section about-inner ---------------------- */
+section.about-inner {
+	.wpcf7 {
+		form {
+			display: flex;
+			flex-wrap: wrap;
+			margin: -1%;
+			margin-top: 45px;
+			position: relative;
+		}
+
+		.wpcf7-form-control-wrap {
+			display: block;
+			width: 98%;
+			margin: 1%;
+
+			&:nth-child(2), &:nth-child(3) {
+				width: 48%;
+			}
+		}
+
+		input, textarea {
+			width: 100%;
+			@include f-r;
+			font-size: 18px;
+			color: #5e5d60;
+			outline: none;
+			border: 1px solid #bdbab4;
+			padding: 20px;
+			border-radius: 5px;
+			-webkit-appearance: none;
+			@include placeholder-color(#59585b);
+			&:focus {
+				@include placeholder-color(#f9931b);
+			}
+
+			&.wpcf7-not-valid {
+				border: 1px solid #E85136;
+			}
+		}
+
+		input[type="submit"] {
+			width: 98%;
+			margin: 1%;
+			@include f-b;
+			font-size: 20px;
+			color: #fff;
+			border: none;
+			border-radius: 100px;
+			background: #f9931b;
+			transition: 0.5s;
+			max-width: 250px;
+			margin-right: auto;
+			&:hover {
+				background: #c38b30;
+			}
+
+
+		}
+
+		span[role="alert"], .wpcf7-response-output {
+			@include f-r;
+			border: none;
+			color: #E85136;
+			position: absolute;
+			
+		}
+		.wpcf7-response-output {
+			bottom: -58px;
+			font-size: 20px;
+		}
+		
+		.ajax-loader {
+			display: none !important;
+		}
+	}
+
+	@media only screen and (max-width : 550px) {
+		margin-top: 30px;
+		padding-bottom: 35px;
+		.wpcf7 {
+			form {
+				display: flex;
+				flex-wrap: wrap;
+				margin: -1%;
+				margin-top: 45px;
+			}
+
+			.wpcf7-form-control-wrap {
+				display: block;
+				width: 98%;
+				margin: 1%;
+
+				&:nth-child(2), &:nth-child(3) {
+					width: 98%;
+				}
+			}
+		}
+	}
+}
+/* --------------------- /Section about-inner ---------------------- */
